@@ -101,9 +101,3 @@ train_ticketing_system/
 - **Port**: Backend runs on `8080`, Frontend on `5173`.
 - **Proxy**: Frontend is configured to proxy API requests to `localhost:8080` during development.
 
-## 🤝 Contributing
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
