@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: train_ticketing_system
+    
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/train_ticketing}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:12345}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${EMAIL_USERNAME}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            
+server:
+  port: 8080
+  
+app:
+  jwt:
+    secret: ${JWT_SECRET:your-secret-key-change-in-production}
+    expiration: 86400000 # 24 hours
+    
+  ticket:
+    cancellation-window-hours: 3
+    pdf:
+      storage-path: ./tickets/
