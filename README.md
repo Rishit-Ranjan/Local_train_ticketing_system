@@ -25,6 +25,7 @@ A robust, full-stack web application for managing train schedules, booking ticke
 
 ### Backend
 - **Framework**: Java Spring Boot
+- **Architecture**: RESTful API
 - **Security**: Spring Security + JWT
 - **Database**: MySQL with Hibernate/JPA
 - **Build Tool**: Gradle
